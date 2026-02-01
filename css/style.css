@@ -1,0 +1,301 @@
+/*---Header---*/
+header nav > div { /* Cette class s'applique à tous les divs qui se trouve dans le nav et qui eux se trouvent dans le header */
+    background-color: #1a1919;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/*---CSS de base---*/
+body{
+    margin: 0;
+}
+.menu-global {
+    font-family: sans-serif;
+}
+.menu-global :hover {
+    color: #8b8a8a;
+}
+h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+}
+
+/*---Logo dans le menu à gauche---*/
+.menu-logo {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+}
+.menu-logo a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/*---Menu central---*/
+.menu-central {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+.menu-central a {
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 0 15px;
+    line-height: 60px;
+}
+
+/*---Menu de droite---*/
+.menu-droite {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    white-space: nowrap;
+}
+
+.menu-droite a {
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 0 15px;
+    line-height: 60px;
+}
+
+/*---Menu vertical qui flotte lors du scroll---*/
+.menu-float {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%) translateX(20px);
+    background-color: #1a1919;
+    padding: 20px 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column; /*Pour mettre le menu vertical */
+    gap: 20px;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 9999;
+}
+.menu-float a { /* Cible spécifiquement le texte */
+    color: #ffffff;
+    text-decoration: none;
+}
+.menu-float :hover {
+    color: #8b8a8a;
+}
+.menu-float.is-visible { /* Class pour le Javascript */
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) translateX(0);
+}
+
+/*---Page générateur---*/
+/* Palette principale */
+.palette-principale-couleurs {
+    display: flex;
+    height: 450px;
+    border: 1px solid #ffffff;
+    margin: 20px 20px 70px 20px;
+}
+
+.colonnes-palettes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 50px;
+    transition: flex 0.3s ease;
+    color: #1a1919;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+/*
+Sert à dire quelle colonne à quoi
+nth-child sert spécifiquement à sélectionner ou un plusieurs éléments selon leur position
+*/
+.colonnes-palettes:nth-child(1) {
+    background-color: #f9f871;
+}
+.colonnes-palettes:nth-child(2) {
+    background-color: #ffc75f;
+}
+.colonnes-palettes:nth-child(3) {
+    background-color: #ff9671;
+}
+.colonnes-palettes:nth-child(4) {
+    background-color: #ff6f91;
+}
+.colonnes-palettes:nth-child(5) {
+    background-color: #d65db1;
+}
+.colonnes-palettes:nth-child(6) {
+    background-color: #845ec2;
+    color: white;
+}
+.colonnes-palettes:nth-child(7) {
+    background-color: #0081cf;
+    color: white;
+}
+.colonnes-palettes:nth-child(8) {
+    background-color: #008f7a;
+    color: white;
+}
+
+/* Palette secondaire 1 */
+.palette-secondaire1 {
+    display: flex;
+    height: 450px;
+    border: 1px solid #ffffff;
+    margin: 20px 200px 70px 200px;
+}
+.colonnes-palettes-sec1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 50px;
+    transition: flex 0.3s ease;
+    color: #1a1919;
+    height: 100%;
+    text-transform: uppercase;
+}
+.colonnes-palettes-sec1:nth-child(1) {
+    background-color: #FFE019;
+}
+.colonnes-palettes-sec1:nth-child(2) {
+    background-color: #ffb619;
+}
+.colonnes-palettes-sec1:nth-child(3) {
+    background-color: #ff8e19;
+}
+.colonnes-palettes-sec1:nth-child(4) {
+    background-color: #fc6260;
+}
+.colonnes-palettes-sec1:nth-child(5) {
+    background-color: #ce568c;
+}
+.colonnes-palettes-sec1:nth-child(6) {
+    background-color: #895a98;
+    color: white;
+}
+.colonnes-palettes-sec1:nth-child(7) {
+    background-color: #485782;
+    color: white;
+}
+.colonnes-palettes-sec1:nth-child(8) {
+    background-color: #2f4858;
+    color: white;
+}
+
+/* Palette secondaire 2 */
+.palette-secondaire2 {
+    display: flex;
+    height: 450px;
+    border: 1px solid #ffffff;
+    margin: 20px 200px 70px 200px;
+}
+.colonnes-palettes-sec2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 50px;
+    transition: flex 0.3s ease;
+    color: #1a1919;
+    height: 100%;
+    text-transform: uppercase;
+}
+.colonnes-palettes-sec2:nth-child(1) {
+    background-color: #FFF651;
+}
+.colonnes-palettes-sec2:nth-child(2) {
+    background-color: #ff9646;
+}
+.colonnes-palettes-sec2:nth-child(3) {
+    background-color: #d72638;
+    color: white;
+}
+.colonnes-palettes-sec2:nth-child(4) {
+    background-color: #8d1339;
+    color: white;
+}
+.colonnes-palettes-sec2:nth-child(5) {
+    background-color: #420039;
+    color: white;
+}
+.colonnes-palettes-sec2:nth-child(6) {
+    background-color: #411852;
+    color: white;
+}
+.colonnes-palettes-sec2:nth-child(7) {
+    background-color: #12355b;
+    color: white;
+}
+.colonnes-palettes-sec2:nth-child(8) {
+    background-color: #0b2441;
+    color: white;
+}
+
+/* Palette secondaire 3 */
+.palette-secondaire3 {
+    display: flex;
+    height: 450px;
+    border: 1px solid #ffffff;
+    margin: 20px 200px 70px 200px;
+}
+.colonnes-palettes-sec3 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 50px;
+    transition: flex 0.3s ease;
+    color: #1a1919;
+    height: 100%;
+    text-transform: uppercase;
+}
+.colonnes-palettes-sec3:nth-child(1) {
+    background-color: #d8c99b;
+}
+.colonnes-palettes-sec3:nth-child(2) {
+    background-color: #d8973c;
+}
+.colonnes-palettes-sec3:nth-child(3) {
+    background-color: #bd632f;
+}
+.colonnes-palettes-sec3:nth-child(4) {
+    background-color: #b14435;
+    color: white;
+}
+.colonnes-palettes-sec3:nth-child(5) {
+    background-color: #a4243b;
+    color: white;
+}
+.colonnes-palettes-sec3:nth-child(6) {
+    background-color: #663141;
+    color: white;
+}
+.colonnes-palettes-sec3:nth-child(7) {
+    background-color: #563b58;
+    color: white;
+}
+.colonnes-palettes-sec3:nth-child(8) {
+    background-color: #452747;
+    color: white;
+}
+/* {}      */
