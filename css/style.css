@@ -89,6 +89,7 @@ h1, h2, h3, h4, h5, h6, p {
 .menu-float a { /* Cible spécifiquement le texte */
     color: #ffffff;
     text-decoration: none;
+    font-family: sans-serif;
 }
 .menu-float :hover {
     color: #8b8a8a;
