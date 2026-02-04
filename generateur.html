@@ -33,133 +33,16 @@
     <main>
         <section>
             <h1>Palette de couleurs suggérée</h1>
-
-            <div class="palette-principale-couleurs">
-                <div class="colonnes-palettes">
-                    <p>#f9f871</p>
-                </div>
-                <div class="colonnes-palettes">
-                    <p>#ffc75f</p>
-                </div>
-                <div class="colonnes-palettes">
-                    <p>#ff9671</p>
-                </div>
-                <div class="colonnes-palettes">
-                    <p>#ff6f91</p>
-                </div>
-                <div class="colonnes-palettes">
-                    <p>#d65db1</p>
-                </div>
-                <div class="colonnes-palettes">
-                    <p>#845ec2</p>
-                </div>
-                <div class="colonnes-palettes">
-                    <p>#0081cf</p>
-                </div>
-                <div class="colonnes-palettes">
-                    <p>#008f7a</p>
-                </div>
-            </div>
+        
+            <div class="palette-principale-couleurs" id="palette-principale-couleurs"></div>
         </section>
 
         <section>
             <h2>Plus de palettes de couleurs</h2>
 
-            <div class="palette-secondaire1">
-                <div class="colonnes-palettes-sec1">
-                    <p>#FFE019</p>
-                </div>
-                <div class="colonnes-palettes-sec1">
-                    <p>#ffb619</p>
-                </div>
-                <div class="colonnes-palettes-sec1">
-                    <p>#ff8e19</p>
-                </div>
-                <div class="colonnes-palettes-sec1">
-                    <p>#fc6260</p>
-                </div>
-                <div class="colonnes-palettes-sec1">
-                    <p>#ce568c</p>
-                </div>
-                <div class="colonnes-palettes-sec1">
-                    <p>#895a98</p>
-                </div>
-                <div class="colonnes-palettes-sec1">
-                    <p>#485782</p>
-                </div>
-                <div class="colonnes-palettes-sec1">
-                    <p>#2f4858</p>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="palette-secondaire2">
-                <div class="colonnes-palettes-sec2">
-                    <p>#FFF651</p>
-                </div>
-                <div class="colonnes-palettes-sec2">
-                    <p>#ff9646</p>
-                </div>
-                <div class="colonnes-palettes-sec2">
-                    <p>#d72638</p>
-                </div>
-                <div class="colonnes-palettes-sec2">
-                    <p>#8d1339</p>
-                </div>
-                <div class="colonnes-palettes-sec2">
-                    <p>#420039</p>
-                </div>
-                <div class="colonnes-palettes-sec2">
-                    <p>#411852</p>
-                </div>
-                <div class="colonnes-palettes-sec2">
-                    <p>#12355b</p>
-                </div>
-                <div class="colonnes-palettes-sec2">
-                    <p>#0b2441</p>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="palette-secondaire3">
-                <div class="colonnes-palettes-sec3">
-                    <p>#d8c99b</p>
-                </div>
-                <div class="colonnes-palettes-sec3">
-                    <p>#d8973c</p>
-                </div>
-                <div class="colonnes-palettes-sec3">
-                    <p>#bd632f</p>
-                </div>
-                <div class="colonnes-palettes-sec3">
-                    <p>#b14435</p>
-                </div>
-                <div class="colonnes-palettes-sec3">
-                    <p>#a4243b</p>
-                </div>
-                <div class="colonnes-palettes-sec3">
-                    <p>#663141</p>
-                </div>
-                <div class="colonnes-palettes-sec3">
-                    <p>#563b58</p>
-                </div>
-                <div class="colonnes-palettes-sec3">
-                    <p>#452747</p>
-                </div>
-            </div>
+            <div class="palette-secondaire" id="palette-secondaire"></div>
         </section>
     </main>
-    <script>
-        const floatingMenu = document.querySelector('.menu-float');
-        window.addEventListener('scroll', () => {
-
-            if (window.scrollY > 120) {
-                floatingMenu.classList.add('is-visible');
-            }else {
-                floatingMenu.classList.remove('is-visible');
-            }
-
-        });
-    </script>
+    <script src="script.js"></script> <!-- Ligne qui lie la feuille js (script.js) au HTML -->
 </body>
 </html>
