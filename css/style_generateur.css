@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6, p {
             cursor: pointer;
         }
         /*Sous-menu lorsque ouvert*/
-            .sous-menu_harmonie {
+            .harmonie-couleurs {
                 display: none;
                 position: absolute;
                 top: 100%;
@@ -161,23 +161,23 @@ h1, h2, h3, h4, h5, h6, p {
                 border-radius: 4px;
                 box-shadow: 0 8px 16px rgba(0,0,0,0.2);
             }
-            .sous-menu_harmonie a { /* Liens du sous-menu */
+            .harmonie-couleurs a { /* Liens du sous-menu */
                 color: #ffffff;
                 padding: 10px 20px;
                 text-decoration: none;
                 display: block;
             }
-            .sous-menu_harmonie a:hover { /* Hover des liens du sous-menu */
+            .harmonie-couleurs a:hover { /* Hover des liens du sous-menu */
                 background-color: #f5f5f5;
                 color: #000000;
             }
-            .dropdown:hover .sous-menu_harmonie { /* Permet l'ouverture du sous-menu */
+            .dropdown:hover .harmonie-couleurs { /* Permet l'ouverture du sous-menu */
                 display: block;
             }
         
 
             /*---Gestion des flèches---*/
-            .icon-fleche {
+            .icone-fleche {
                 display: inline-block;
                 width: 16px;
                 height: 16px;
@@ -185,22 +185,16 @@ h1, h2, h3, h4, h5, h6, p {
                 background-size: contain;
                 background-repeat: no-repeat;
             }
-            .dropdown:hover .icon-fleche {
+            .dropdown:hover .icone-fleche {
                 background-image: url('../images/fleche_haut.svg');
             }
 
         /*---Nombre de couleurs---*/
-        .sous-menu_nb-couleurs {
+        .nb-couleurs {
             display: flex;
             flex-direction: row; 
             align-items: center;
             gap: 15px;
-        }
-        .label-nb {
-            white-space: nowrap; 
-            font-size: 14px;
-            font-weight: bold;
-            color: #000000;
         }
         .number-control button { /* Style du + et du - */
             width: 30px;

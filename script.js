@@ -101,3 +101,22 @@ btnMinus.addEventListener('click', () => {
         valueDisplay.textContent = current - 1;
     }
 });
+
+document.getElementById('nb-couleurs').addEventListener('click', function() {
+  alert('Button was clicked!');
+});
+
+// Bouton harmonies de couleurs
+document.getElementById('harmonie-couleurs').addEventListener('click', function() {
+  alert('Button was clicked!');
+});
+
+// Bouton générer une new palette
+document.getElementById('bouton-generer').addEventListener('click', function() {
+  alert('Button was clicked!');
+});
+
+// Bouton checkbox
+document.getElementById('checkbox-noir').addEventListener('click', function() {
+  alert('Button was clicked!');
+});
