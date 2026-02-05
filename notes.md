@@ -1,13 +1,9 @@
 À faire
-- Créer bouton harmonie de couleurs
-- Créer le boutton stepper (voir image Discord BriBri 3 février)
-- Créer le menu pour les filtres
-    - Créer le dropdown pour les harmonies
-    - Créer le bouton reload de la page
-    - Créer le bouton confirmer les settings
-    - Dans le menu sidebar scroll remplacer Générateur par le bouton Générer une nouvelle palette
+- Dans le menu sidebar scroll remplacer Générateur par le bouton Générer une nouvelle palette (reload)
+
 - Réfléchir à la partie payante 15$ par année par utilisateur
     - Section livre style Buddy colo
+    - Bibliothèque plus de 5 palettes enregistrées (donc 6 et + ont être dans la version premium)
 
 ----------------------------
 Prochaine rencontre BriBri TO DO LIST
@@ -20,3 +16,4 @@ Prochaine rencontre BriBri TO DO LIST
 ----------------------------
 Autre rencontre BriBri TO DO LIST
 - Créer bibliotheque : les gens doivent pouvoir mettre un nom à chaque bibliothèque
+- Créer profil/se connecter/s'inscrire

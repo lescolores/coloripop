@@ -22,107 +22,52 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center;
 }
 
-/*---Logo dans le menu à gauche---*/
-.menu-logo {
-    flex: 1 1 0;
-    display: flex;
-    align-items: center;
-}
-.menu-logo a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    white-space: nowrap;
-}
+/*---Menu---*/
+    /*---Logo à gauche---*/
+    .menu-logo {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+    }
+    .menu-logo a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        white-space: nowrap;
+    }
 
-/*---Menu central---*/
-.menu-central {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-}
-.menu-central a {
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 2px;
-    padding: 0 15px;
-    line-height: 60px;
-}
+    /*---Menu central---*/
+    .menu-central {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+    .menu-central a {
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        padding: 0 15px;
+        line-height: 60px;
+    }
 
-/*---Menu de droite---*/
-.menu-droite {
-    flex: 1 1 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    white-space: nowrap;
-}
+    /*---Menu à droite---*/
+    .menu-droite {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        white-space: nowrap;
+    }
 
-.menu-droite a {
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 2px;
-    padding: 0 15px;
-    line-height: 60px;
-}
+    .menu-droite a {
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        padding: 0 15px;
+        line-height: 60px;
+    }
+    
 
-/*---Menu vertical qui flotte lors du scroll---*/
-.menu-float {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%) translateX(20px);
-    background-color: #1a1919;
-    padding: 20px 12px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column; /*Pour mettre le menu vertical */
-    gap: 20px;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 9999;
-}
-.menu-float a { /* Cible spécifiquement le texte */
-    color: #ffffff;
-    text-decoration: none;
-    font-family: sans-serif;
-}
-.menu-float :hover {
-    color: #8b8a8a;
-}
-.menu-float.is-visible { /* Class pour le Javascript */
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(-50%) translateX(0);
-}
-
-/*---Page générateur---*/
-.palette-principale-couleurs {
-    display: flex;
-    height: 450px;
-    border: 1px solid #ffffff;
-    margin: 20px 20px 70px 20px;
-}
-.palette-secondaire {
-    display: flex;
-    flex-wrap: wrap; /* PERMET D'AVOIR PLUSIEURS LIGNES */
-    height: auto;    /* 'auto' car 3 palettes sont plus hautes qu'une seule */
-    min-height: 450px;
-    border: 1px solid #ffffff;
-    margin: 20px 200px 70px 200px;
-}
-.colonnes-palettes {
-    flex: 1 0 20%; /* Le 20% force 5 colonnes par ligne (100% / 5 = 20%) */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding-bottom: 50px;
-    height: 450px; /* On garde la hauteur pour chaque bloc */
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
+/*---Login---*/

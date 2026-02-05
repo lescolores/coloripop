@@ -79,3 +79,25 @@ window.onload = function() {
 
     PalettesDeCouleurs(PalettesSecondaires, 3)
 }
+
+// Bouton nombre de couleurs
+const btnMinus = document.querySelector('.btn-minus');
+const btnPlus = document.querySelector('.btn-plus');
+const valueDisplay = document.querySelector('.number-value');
+
+const min = parseInt(valueDisplay.getAttribute('data-min'));
+const max = parseInt(valueDisplay.getAttribute('data-max'));
+
+btnPlus.addEventListener('click', () => {
+    let current = parseInt(valueDisplay.textContent);
+    if (current < max) {
+        valueDisplay.textContent = current + 1;
+    }
+});
+
+btnMinus.addEventListener('click', () => {
+    let current = parseInt(valueDisplay.textContent);
+    if (current > min) {
+        valueDisplay.textContent = current - 1;
+    }
+});

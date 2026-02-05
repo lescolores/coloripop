@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Générateur</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_generateur.css">
 </head>
 <body>
     <div class="menu-float">
         <a href="index.html">Accueil</a>
-        <a href="generateur.html">Générateur</a>
+        <a href="#">Générer une nouvelle palette</a>
         <a href="biblio.html">Bibliothèques</a>
     </div>
     <header>
@@ -29,6 +29,50 @@
                 </div>
             </div>
         </nav>
+        <section>
+            <div class="menu-filtres">
+                <div class="filtres">
+                    
+                    <div class="dropdown">
+                        <a href="#" class="trigger harmonie-trigger">
+                            Harmonies de couleurs
+                            <span class="icon-fleche"></span>
+                        </a>
+                        
+                        <div class="sous-menu_harmonie">
+                            <a href="#">Aléatoire</a>
+                            <a href="#">Analogue</a>
+                            <a href="#">Monochrome</a>
+                            <a href="#">Triade (3)</a>
+                            <a href="#">Complémentaire (2)</a>
+                            <a href="#">Complémentaire adjacent (3)</a>
+                            <a href="#">Tétrade (4)</a>
+                            <a href="#">Carré (4)</a>
+                        </div>
+                    </div>
+
+                    <div class="sous-menu_nb-couleurs">
+                        <span class="label-nb">Nombre de couleurs</span>
+                        <div class="number-control">
+                            <button type="button" class="btn-minus">-</button>
+                            <span class="number-value" data-min="1" data-max="8">5</span>
+                            <button type="button" class="btn-plus">+</button>
+                        </div>
+                    </div>
+
+                    <a href="#" class="bouton-generer">
+                        <img src="images/reload.svg" alt="" class="icone-reload">
+                        Générer une nouvelle palette
+                    </a>
+
+                    <div class="checkbox-noir">
+                        <input type="checkbox" id="exclure-noir" name="exclure-noir">
+                        <label for="exclure-noir">Exclure le noir</label>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </header>
     <main>
         <section>

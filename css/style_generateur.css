@@ -1,0 +1,324 @@
+/*---Header---*/
+header nav > div { /* Cette class s'applique à tous les divs qui se trouve dans le nav et qui eux se trouvent dans le header */
+    background-color: #1a1919;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/*---CSS de base---*/
+body{
+    margin: 0;
+}
+.menu-global {
+    font-family: sans-serif;
+}
+.menu-global :hover {
+    color: #8b8a8a;
+}
+h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+}
+
+/*---Menu---*/
+    /*---Logo à gauche---*/
+    .menu-logo {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+    }
+    .menu-logo a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    /*---Menu central---*/
+    .menu-central {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+    .menu-central a {
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        padding: 0 15px;
+        line-height: 60px;
+    }
+
+    /*---Menu à droite---*/
+    .menu-droite {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        white-space: nowrap;
+    }
+
+    .menu-droite a {
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        padding: 0 15px;
+        line-height: 60px;
+    }
+    /*---Menu vertical qui flotte lors du scroll---*/
+    .menu-float {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%) translateX(20px);
+        background-color: #1a1919;
+        padding: 20px 12px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column; /*Pour mettre le menu vertical */
+        gap: 20px;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 9999;
+    }
+    .menu-float a { /* Cible spécifiquement le texte */
+        color: #ffffff;
+        text-decoration: none;
+        font-family: sans-serif;
+    }
+    .menu-float :hover {
+        color: #8b8a8a;
+    }
+    .menu-float.is-visible { /* Class pour le Javascript */
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    /*---Menu des filtres et options---*/
+    .menu-filtres {
+        font-family: sans-serif;
+        position: relative;
+        width: 100%;
+    }
+    .filtres {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        gap: 40px;
+        padding: 20px;
+        background: transparent;
+        font-family: sans-serif;
+        color: #000000;
+    }
+    .menu-filtres::after { /* Ajoute une ligne noire sous le menu */
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 12.5%;
+        width: 75%;
+        height: 1.5px;
+        background-color: #000000;
+    }
+    .harmonie-trigger, .label-nb, .number-value, .bouton-generer, .checkbox-noir label { /* Rend les boutons uniformes */
+        font-family: sans-serif;
+        color: #000000;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+        /*---Harmonie de couleurs---*/
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .harmonie-trigger {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+        /*Sous-menu lorsque ouvert*/
+            .sous-menu_harmonie {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #ff0000; 
+                padding: 10px 0;
+                min-width: 220px;
+                z-index: 1000;
+                border-radius: 4px;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            }
+            .sous-menu_harmonie a { /* Liens du sous-menu */
+                color: #ffffff;
+                padding: 10px 20px;
+                text-decoration: none;
+                display: block;
+            }
+            .sous-menu_harmonie a:hover { /* Hover des liens du sous-menu */
+                background-color: #f5f5f5;
+                color: #000000;
+            }
+            .dropdown:hover .sous-menu_harmonie { /* Permet l'ouverture du sous-menu */
+                display: block;
+            }
+        
+
+            /*---Gestion des flèches---*/
+            .icon-fleche {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background-image: url('../images/fleche_bas.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .dropdown:hover .icon-fleche {
+                background-image: url('../images/fleche_haut.svg');
+            }
+
+        /*---Nombre de couleurs---*/
+        .sous-menu_nb-couleurs {
+            display: flex;
+            flex-direction: row; 
+            align-items: center;
+            gap: 15px;
+        }
+        .label-nb {
+            white-space: nowrap; 
+            font-size: 14px;
+            font-weight: bold;
+            color: #000000;
+        }
+        .number-control button { /* Style du + et du - */
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #000000;
+            background-color: #ffffff;
+            color: #ff0000;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .number-control button:hover { /* Hover du + et du - */
+            background-color: #bebebe;
+        }
+        .number-value { /* Style du nombre */
+            font-weight: bold;
+            font-size: 16px;
+            color: #ffffff;
+        }
+        .number-control { /* Forme de bouton*/
+            display: flex;
+            align-items: center;
+            background-color: #ff0000; 
+            padding: 6px 12px;
+            border-radius: 50px;
+            gap: 15px;
+        }
+
+        /*---Bouton Regénérer une new palette---*/
+        .bouton-generer {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #ff0000;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-family: sans-serif;
+        }
+        .bouton-generer:hover {
+            background-color: #ffffff;
+            color: #000000;
+            transform: scale(1.02);
+        }
+            /*---Gestion de la flèche---*/
+            .icone-reload {
+                width: 18px;
+                height: 18px;
+                filter: brightness(0) invert(1); /* La flèche change de couleurs */
+            }
+            .bouton-generer:hover .icone-reload { /* Changer le hover de l'icône*/
+                filter: brightness(0);
+            }
+
+        /*---Exclusion du noir---*/
+        .checkbox-noir {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+        .checkbox-noir input[type="checkbox"] { /* Enlève le style par défaut */
+            appearance: none;
+            -webkit-appearance: none;
+            width: 1.5em;
+            height: 1.5em;
+            border: 2px solid #000000;
+            border-radius: 100%;
+            background-color: #ffffff;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.2s;
+        }
+        .checkbox-noir input[type="checkbox"]:checked { /* Si la class est coché, fait ça */
+            background-color: #000000;
+        }
+        .checkbox-noir input[type="checkbox"]:checked::after { /* Quand la case est cochée */
+            content: '✔';
+            position: absolute;
+            color: white;
+            font-size: 11px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .checkbox-noir input[type="checkbox"]:hover { /* Hover de la case */
+            background-color: #b4b4b4;
+        }
+
+/*---Page générateur---*/
+    .palette-principale-couleurs {
+        display: flex;
+        height: 450px;
+        border: 1px solid #ffffff;
+        margin: 20px 20px 70px 20px;
+    }
+    .palette-secondaire {
+        display: flex;
+        flex-wrap: wrap; /* PERMET D'AVOIR PLUSIEURS LIGNES */
+        height: auto;    /* 'auto' car 3 palettes sont plus hautes qu'une seule */
+        min-height: 450px;
+        border: 1px solid #ffffff;
+        margin: 20px 200px 70px 200px;
+    }
+    .colonnes-palettes {
+        flex: 1 0 20%; /* Le 20% force 5 colonnes par ligne (100% / 5 = 20%) */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 50px;
+        height: 450px; /* On garde la hauteur pour chaque bloc */
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
