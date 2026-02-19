@@ -1,7 +1,4 @@
 À faire
-- Corriger le CSS pour faire apparaître la flèche rouge
-- Corriger le CSS pour faire l'intérieur du dropdown : rouge texte blanc, hover : blanc, texte rouge
-- Écrire Harmonies de couleurs à gauche du dropdown
 - Faire la section bibliothèque
 
 Trouver et faire des templates sur https://www.jotform.com/fr/form-templates/

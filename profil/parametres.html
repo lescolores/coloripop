@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres — Les Colorés</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/profil.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-global">
+                <div class="menu-logo"><a href="#">Logo</a></div>
+                <div class="menu-central">
+                    <a href="../index.html">Accueil</a>
+                    <a href="../generateur.html">Générateur</a>
+                    <a href="../biblio.html">Bibliothèques</a>
+                </div>
+                <div class="menu-droite">
+                    <a href="../login/login.html">Se connecter</a>
+                    <a href="../login/signup.html">S'inscrire</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-profil">
+        <aside class="sidebar">
+            <div class="avatar-section">
+                <div class="grand-avatar">MT</div>
+                <div class="nom-profil">Marie Tremblay</div>
+                <span class="plan-badge" id="badge-plan">Gratuit</span>
+            </div>
+            <nav class="nav-sidebar">
+                <a href="profil.html" class="nav-item"><span class="nav-icone">👤</span> Général</a>
+                <a href="abonnement.html" class="nav-item"><span class="nav-icone">💳</span> Abonnement</a>
+                <a href="parametres.html" class="nav-item actif"><span class="nav-icone">⚙️</span> Paramètres</a>
+                <a href="dashboard.html" class="nav-item"><span class="nav-icone">📊</span> Dashboard</a>
+            </nav>
+        </aside>
+
+        <main class="contenu-principal">
+            <div class="panneau actif" id="panneau-parametres">
+                <h1 class="titre-panneau">Paramètres</h1>
+                <p class="desc-panneau">Personnalisez vos préférences de communication.</p>
+
+                <div class="carte">
+                    <div class="carte-titre">Préférences courriel</div>
+                    <div class="pref-item">
+                        <div class="pref-info">
+                            <strong>Toutes les notifications</strong>
+                            <span>Recevoir tous les courriels de la plateforme</span>
+                        </div>
+                        <label class="toggle"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+                    </div>
+                    <div class="pref-item">
+                        <div class="pref-info">
+                            <strong>Mises à jour du produit</strong>
+                            <span>Nouvelles fonctionnalités et améliorations</span>
+                        </div>
+                        <label class="toggle"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+                    </div>
+                    <div class="pref-item">
+                        <div class="pref-info">
+                            <strong>Activité communautaire</strong>
+                            <span>Quand quelqu'un aime ou partage vos palettes</span>
+                        </div>
+                        <label class="toggle"><input type="checkbox"><span class="toggle-slider"></span></label>
+                    </div>
+                </div>
+
+                <div class="separateur-section"></div>
+
+                <div class="zone-danger">
+                    <div class="carte-titre">⚠️ Zone dangereuse</div>
+                    <p class="zone-danger-desc">La suppression de votre compte est permanente et irréversible.</p>
+                    <button class="btn-supprimer">🗑️ Supprimer mon compte</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/profil.js"></script>
+</body>
+</html>

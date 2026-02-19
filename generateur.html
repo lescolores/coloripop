@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Générateur</title>
-    <link rel="stylesheet" href="css/style_generateur.css">
+    <title>ColoriPop Générateur</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/generateur.css">
 </head>
 <body>
     <div class="menu-float">
@@ -25,20 +26,18 @@
                     <a href="biblio.html">Bibliothèques</a>
                 </div>
                 <div class="menu-droite">
-                    <a href="login.html">Se connecter</a>
-                    <a href="signup.html">S'inscrire</a>
+                    <a href="login/login.html">Se connecter</a>
+                    <a href="login/signup.html">S'inscrire</a>
                 </div>
             </div>
         </nav>
         <section>
             <div class="menu-filtres">
                 <div class="filtres">
-                    <div class="dropdown">
-                        <label for="icone-fleche">Harmonies de couleurs</label>
-
-                        <select class="harmonies-couleurs" id="harmonies-couleurs"></select>
+                    <div class="dropdown" id="dropdown-harmonies">
+                        <button class="icone-fleche" id="dropdown-btn" type="button">Harmonies de couleurs</button>
+                        <ul class="dropdown-menu" id="dropdown-menu"></ul>
                     </div>
-
                     <div class="nb-couleurs" id="nb-couleurs">
                         <span class="label-nb">Nombre de couleurs</span>
                         <div class="number-control">
@@ -47,12 +46,10 @@
                             <button type="button" class="btn-plus">+</button>
                         </div>
                     </div>
-
                     <div class="checkbox-noir" id="checkbox-noir">
                         <input type="checkbox" id="exclure-noir" name="exclure-noir">
                         <label for="exclure-noir">Exclure le noir</label>
                     </div>
-
                     <a href="#" class="bouton-generer" id="bouton-generer">
                         <img src="images/reload.svg" alt="" class="icone-reload">
                         Générer une nouvelle palette
@@ -64,16 +61,18 @@
     <main>
         <section>
             <h1>Palette de couleurs suggérée</h1>
-        
             <div class="palette-principale-couleurs" id="palette-principale-couleurs"></div>
         </section>
-
         <section>
             <h2>Plus de palettes de couleurs</h2>
-
             <div class="palette-secondaire" id="palette-secondaire"></div>
         </section>
     </main>
-    <script src="js/script_generateur.js"></script> <!-- Ligne qui lie la feuille js (script.js) au HTML -->
+    <footer>
+        <div class="footer-logo">Logo</div>
+        <div class="footer-copy">© 2025 Les Colorés</div>
+    </footer>
+    <script src="js/generateur.js"></script>
+    <script src="js/global.js"></script>
 </body>
 </html>

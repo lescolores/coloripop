@@ -1,73 +1,7 @@
-/*---Header---*/
-header nav > div { /* Cette class s'applique à tous les divs qui se trouve dans le nav et qui eux se trouvent dans le header */
-    background-color: #1a1919;
-    display: flex;
-    align-items: center;
-    height: 60px;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
+/* =========================================
+   STYLE.CSS
+   Styles spécifiques à la page d'accueil
+   Requiert : global.css
+   ========================================= */
 
-/*---CSS de base---*/
-body{
-    margin: 0;
-}
-.menu-global {
-    font-family: sans-serif;
-}
-.menu-global :hover {
-    color: #8b8a8a;
-}
-h1, h2, h3, h4, h5, h6, p {
-    text-align: center;
-}
-
-/*---Menu---*/
-    /*---Logo à gauche---*/
-    .menu-logo {
-        flex: 1 1 0;
-        display: flex;
-        align-items: center;
-    }
-    .menu-logo a {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: bold;
-        white-space: nowrap;
-    }
-
-    /*---Menu central---*/
-    .menu-central {
-        flex: 0 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        white-space: nowrap;
-    }
-    .menu-central a {
-        color: #ffffff;
-        text-decoration: none;
-        letter-spacing: 2px;
-        padding: 0 15px;
-        line-height: 60px;
-    }
-
-    /*---Menu à droite---*/
-    .menu-droite {
-        flex: 1 1 0;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        white-space: nowrap;
-    }
-
-    .menu-droite a {
-        color: #ffffff;
-        text-decoration: none;
-        letter-spacing: 2px;
-        padding: 0 15px;
-        line-height: 60px;
-    }
-    
-
-/*---Login---*/
+/* Ajoute tes styles spécifiques à la page d'accueil ici */

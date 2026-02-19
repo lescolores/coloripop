@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abonnement — Les Colorés</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/profil.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-global">
+                <div class="menu-logo"><a href="#">Logo</a></div>
+                <div class="menu-central">
+                    <a href="../index.html">Accueil</a>
+                    <a href="../generateur.html">Générateur</a>
+                    <a href="../biblio.html">Bibliothèques</a>
+                </div>
+                <div class="menu-droite">
+                    <a href="../login/login.html">Se connecter</a>
+                    <a href="../login/signup.html">S'inscrire</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-profil">
+        <aside class="sidebar">
+            <div class="avatar-section">
+                <div class="grand-avatar">MT</div>
+                <div class="nom-profil">Marie Tremblay</div>
+                <span class="plan-badge" id="badge-plan">Gratuit</span>
+            </div>
+            <nav class="nav-sidebar">
+                <a href="profil.html" class="nav-item"><span class="nav-icone">👤</span> Général</a>
+                <a href="abonnement.html" class="nav-item actif"><span class="nav-icone">💳</span> Abonnement</a>
+                <a href="parametres.html" class="nav-item"><span class="nav-icone">⚙️</span> Paramètres</a>
+                <a href="dashboard.html" class="nav-item"><span class="nav-icone">📊</span> Dashboard</a>
+            </nav>
+        </aside>
+
+        <main class="contenu-principal">
+            <div class="panneau actif" id="panneau-abonnement">
+                <h1 class="titre-panneau">Abonnement</h1>
+                <p class="desc-panneau">Gérez votre plan et votre mode de paiement.</p>
+
+                <div class="cartes-abonnement">
+                    <div class="carte-plan actuel" onclick="choisirPlan('gratuit')">
+                        <span class="plan-badge-carte">Plan actuel</span>
+                        <div class="plan-nom">Gratuit</div>
+                        <div class="plan-prix">0$ <small>/ an</small></div>
+                        <ul class="plan-features">
+                            <li>Générateur de palettes</li>
+                            <li>5 palettes sauvegardées</li>
+                            <li>Accès à la communauté</li>
+                        </ul>
+                    </div>
+                    <div class="carte-plan premium-plan" onclick="choisirPlan('premium')">
+                        <span class="plan-badge-carte">✨ Premium</span>
+                        <div class="plan-nom">Premium</div>
+                        <div class="plan-prix">14,99$ <small>/ an</small></div>
+                        <ul class="plan-features">
+                            <li>Palettes illimitées</li>
+                            <li>Harmonies avancées</li>
+                            <li>Export haute qualité</li>
+                            <li>Buddy Color avancé</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="carte">
+                    <div class="carte-titre">Mode de paiement</div>
+                    <div class="carte-paiement-display">
+                        <div class="carte-chip">VISA</div>
+                        <div class="carte-details">
+                            <div class="carte-numero">•••• •••• •••• 4242</div>
+                            <div class="carte-expiry">Expire 09/2027</div>
+                        </div>
+                        <button class="btn-modifier">Modifier</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/profil.js"></script>
+</body>
+</html>

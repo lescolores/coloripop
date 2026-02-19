@@ -79,25 +79,54 @@ const Dicoharmonies = { // Banque des harmonies
   "aleatoire": "Aléatoire",
   "analogue": "Analogue",
   "monochrome": "Monochrome",
-  "triade": "Triade",
-  "complementaire": "Complémentaire",
-  "complementaire-adjacent": "Complémentaire adjacent",
-  "tetrade": "Tétrade",
-  "carre": "Carré"
+  "triade": "Triade (3)",
+  "complementaire": "Complémentaire (2)",
+  "complementaire-adjacent": "Complémentaire adjacent (3)",
+  "tetrade": "Tétrade (4)",
+  "carre": "Carré (4)"
 };
+
+// Variables du dropdown custom
+const dropdownBtn = document.getElementById('dropdown-btn');
+const dropdownContainer = document.getElementById('dropdown-harmonies');
+const dropdownMenu = document.getElementById('dropdown-menu');
+
+let harmonieSelectionnee = 'aleatoire'; // Valeur par défaut
 
 // window.onload dit que chaque fois que la page load, on appelle une fonction
 window.onload = function() {
-    PalettesDeCouleurs(PalettePrincipale, 1)
-    PalettesDeCouleurs(PalettesSecondaires, 3)
-    const dropdown = document.getElementById('harmonies-couleurs');
-        Object.entries(Dicoharmonies).forEach(([value, text]) => {
-        const option = document.createElement('option');
-        option.value = value;
-        option.text = text;
-        dropdown.appendChild(option);
+    PalettesDeCouleurs(PalettePrincipale, 1);
+    PalettesDeCouleurs(PalettesSecondaires, 3);
+
+    // Crée un <li> pour chaque harmonie dans le dropdown
+    Object.entries(Dicoharmonies).forEach(([value, text]) => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        li.dataset.value = value;
+
+        li.addEventListener('click', () => {
+            harmonieSelectionnee = value;
+            dropdownBtn.textContent = text; // Met à jour le texte du bouton
+            dropdownContainer.classList.remove('is-open');
+
+            console.log('Harmonie choisie : ' + harmonieSelectionnee);
         });
-}
+
+        dropdownMenu.appendChild(li);
+    });
+};
+
+// Ouvrir / fermer le dropdown
+dropdownBtn.addEventListener('click', () => {
+    dropdownContainer.classList.toggle('is-open');
+});
+
+// Fermer le dropdown si clic en dehors
+document.addEventListener('click', (e) => {
+    if (!dropdownContainer.contains(e.target)) {
+        dropdownContainer.classList.remove('is-open');
+    }
+});
 
 // Bouton nombre de couleurs
 const btnMinus = document.querySelector('.btn-minus'); // Permet de faire -1
@@ -119,11 +148,6 @@ btnMinus.addEventListener('click', () => {
     if (current > min) {
         valueDisplay.textContent = current - 1;
     }
-});
-
-// Bouton harmonies de couleurs
-document.getElementById('harmonies-couleurs').addEventListener('change', function() {
-  alert('Ok ça a changé grosse bitch ' + this.value);
 });
 
 // Bouton new palette

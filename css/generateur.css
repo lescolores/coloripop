@@ -1,0 +1,283 @@
+/* =========================================
+   GENERATEUR.CSS
+   Styles spécifiques à la page générateur
+   Requiert : global.css
+   ========================================= */
+
+/* --- Menu flottant (spécifique au générateur) --- */
+.menu-float {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%) translateX(20px);
+    background-color: var(--gris-fonce);
+    padding: 20px 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 9999;
+}
+
+.menu-float a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--font-ui);
+}
+
+.menu-float :hover {
+    color: var(--texte-mid);
+}
+
+.menu-float.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* --- Menu des filtres --- */
+.menu-filtres {
+    font-family: var(--font-ui);
+    position: relative;
+    width: 100%;
+}
+
+.filtres {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background: transparent;
+    font-family: var(--font-ui);
+    color: #000000;
+}
+
+.menu-filtres::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 12.5%;
+    width: 75%;
+    height: 1.5px;
+    background-color: #000000;
+}
+
+.harmonie-trigger, .label-nb, .number-value, .bouton-generer, .checkbox-noir label {
+    font-family: var(--font-ui);
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--taille-menu);
+}
+
+/* --- Dropdown harmonies --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.icone-fleche {
+    display: block;
+    padding: 10px 30px 10px 0;
+    font-weight: bold;
+    font-size: var(--taille-menu);
+    color: #000000;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-image: url('../images/fleche_bas.svg');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    font-family: var(--font-ui);
+}
+
+.dropdown.is-open .icone-fleche {
+    background-image: url('../images/fleche_haut.svg');
+}
+
+.icone-fleche:hover {
+    background-image: url('../images/fleche_bas_hover.svg');
+    color: var(--rouge);
+}
+
+.dropdown.is-open .icone-fleche:hover {
+    background-image: url('../images/fleche_haut.svg');
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    min-width: 220px;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dropdown.is-open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: var(--font-ui);
+}
+
+.dropdown-menu li:hover {
+    background-color: var(--rouge);
+    color: #ffffff;
+}
+
+/* --- Nombre de couleurs --- */
+.nb-couleurs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.number-control button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    color: var(--rouge);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-control button:hover {
+    background-color: #bebebe;
+}
+
+.number-value {
+    font-weight: bold;
+    font-size: var(--taille-menu);
+    color: #ffffff;
+}
+
+.number-control {
+    display: flex;
+    align-items: center;
+    background-color: var(--rouge);
+    padding: 6px 12px;
+    border-radius: 50px;
+    gap: 15px;
+}
+
+/* --- Bouton générer --- */
+.bouton-generer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--rouge);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-family: var(--font-ui);
+}
+
+.bouton-generer:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.02);
+}
+
+.icone-reload {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.bouton-generer:hover .icone-reload {
+    filter: brightness(0);
+}
+
+/* --- Checkbox exclure noir --- */
+.checkbox-noir {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox-noir input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.5em;
+    height: 1.5em;
+    border: 2px solid #000000;
+    border-radius: 100%;
+    background-color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+}
+
+.checkbox-noir input[type="checkbox"]:checked {
+    background-color: #000000;
+}
+
+.checkbox-noir input[type="checkbox"]:checked::after {
+    content: '✔';
+    position: absolute;
+    color: white;
+    font-size: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-noir input[type="checkbox"]:hover {
+    background-color: #b4b4b4;
+}
+
+/* --- Palettes --- */
+.palette-principale-couleurs {
+    display: flex;
+    height: 450px;
+    border: 1px solid #ffffff;
+    margin: 20px 20px 70px 20px;
+}
+
+.palette-secondaire {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 450px;
+    border: 1px solid #ffffff;
+    margin: 20px 200px 70px 200px;
+}
+
+.colonnes-palettes {
+    flex: 1 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 50px;
+    height: 450px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}

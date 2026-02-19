@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se connecter — Les Colorés</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/login_signup.css">
+</head>
+<body class="focus-vert">
+
+    <div class="panneau-gauche">
+        <div class="bg-grille"></div>
+        <div class="blob blob-1-login"></div>
+        <div class="blob blob-2-login"></div>
+        <div class="blob blob-3-login"></div>
+        <div class="blob blob-4-login"></div>
+        <div class="contenu-gauche">
+            <div class="logo-texte">Les <span class="gradient-chaud">Colorés</span></div>
+            <p class="tagline">Votre espace créatif pour explorer, créer et partager vos palettes de couleurs.</p>
+            <div class="palette-deco">
+                <div class="puce-couleur" style="background:#ff4d4d;"></div>
+                <div class="puce-couleur" style="background:#ffc94d;"></div>
+                <div class="puce-couleur" style="background:#4ddfb8;"></div>
+                <div class="puce-couleur" style="background:#7b6bff;"></div>
+                <div class="puce-couleur" style="background:#ff7eb3;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panneau-droit">
+        <div class="formulaire-container">
+            <h1 class="titre-form">Bon retour 👋</h1>
+            <p class="sous-titre-form">Pas encore de compte ? <a href="signup.html">S'inscrire</a></p>
+
+            <div class="groupe-champ">
+                <label for="courriel">Courriel</label>
+                <input type="email" id="courriel" placeholder="vous@exemple.com">
+            </div>
+
+            <div class="groupe-champ">
+                <div class="ligne-mdp">
+                    <label for="mdp">Mot de passe</label>
+                    <a href="#" class="lien-oublie">Mot de passe oublié ?</a>
+                </div>
+                <input type="password" id="mdp" placeholder="••••••••">
+            </div>
+
+            <button class="bouton-connexion" onclick="window.location.href='../profil/profil.html'">Se connecter</button>
+
+            <div class="separateur">ou continuer avec</div>
+
+            <button class="bouton-social">
+                <span class="icone-social">G</span> Continuer avec Google
+            </button>
+            <button class="bouton-social">
+                <span class="icone-social">f</span> Continuer avec Facebook
+            </button>
+        </div>
+    </div>
+</body>
+</html>

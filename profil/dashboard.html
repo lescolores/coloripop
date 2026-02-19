@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Les Colorés</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/profil.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-global">
+                <div class="menu-logo"><a href="#">Logo</a></div>
+                <div class="menu-central">
+                    <a href="../index.html">Accueil</a>
+                    <a href="../generateur.html">Générateur</a>
+                    <a href="../biblio.html">Bibliothèques</a>
+                </div>
+                <div class="menu-droite">
+                    <a href="../login/login.html">Se connecter</a>
+                    <a href="../login/signup.html">S'inscrire</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-profil">
+        <aside class="sidebar">
+            <div class="avatar-section">
+                <div class="grand-avatar">MT</div>
+                <div class="nom-profil">Marie Tremblay</div>
+                <span class="plan-badge" id="badge-plan">Gratuit</span>
+            </div>
+            <nav class="nav-sidebar">
+                <a href="profil.html" class="nav-item"><span class="nav-icone">👤</span> Général</a>
+                <a href="abonnement.html" class="nav-item"><span class="nav-icone">💳</span> Abonnement</a>
+                <a href="parametres.html" class="nav-item"><span class="nav-icone">⚙️</span> Paramètres</a>
+                <a href="dashboard.html" class="nav-item actif"><span class="nav-icone">📊</span> Dashboard</a>
+            </nav>
+        </aside>
+
+        <main class="contenu-principal">
+            <div class="panneau actif" id="panneau-dashboard">
+                <h1 class="titre-panneau">Dashboard</h1>
+                <p class="desc-panneau">Vue d'ensemble de votre activité créative.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-carte">
+                        <div class="stat-nombre" style="color:var(--accent3);">12</div>
+                        <div class="stat-label">Palettes créées</div>
+                    </div>
+                    <div class="stat-carte">
+                        <div class="stat-nombre" style="color:var(--accent2);">48</div>
+                        <div class="stat-label">Couleurs explorées</div>
+                    </div>
+                </div>
+
+                <div class="onglets-sub">
+                    <button class="onglet-sub actif" id="onglet-bibliotheque" onclick="changerSousOngletDirect('bibliotheque')">📚 Bibliothèque</button>
+                    <button class="onglet-sub" id="onglet-buddy" onclick="changerSousOngletDirect('buddy')">🤝 Buddy Color</button>
+                </div>
+
+                <div class="sous-panneau actif" id="sous-bibliotheque">
+                    <div class="mini-palettes">
+                        <div class="mini-palette">
+                            <div class="mini-palette-couleurs">
+                                <div style="background:#ff4d4d;"></div><div style="background:#ff8c42;"></div>
+                                <div style="background:#ffc94d;"></div><div style="background:#4ddfb8;"></div>
+                            </div>
+                            <div class="mini-palette-info">
+                                <div class="mini-palette-nom">Coucher de soleil</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous-panneau" id="sous-buddy">
+                    <div class="buddy-grid">
+                        <div class="buddy-carte">
+                            <div class="buddy-info">
+                                <span class="buddy-username">@jean.dupont</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/profil.js"></script>
+</body>
+</html>

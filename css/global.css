@@ -1,0 +1,174 @@
+/* =========================================
+   GLOBAL.CSS
+   Contient : fonts, variables, reset, menu, footer
+   À lier dans TOUS les fichiers HTML
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ===== RESET ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+    /* Couleurs principales */
+    --noir:       #0e0e0e;
+    --gris-fonce: #1a1919;
+    --gris-mid:   #1e1e1e;
+    --gris-panel: #242424;
+    --gris-bord:  #2e2e2e;
+    --blanc:      #f5f5f0;
+    --rouge:      #ff0000;
+    --accent1:    #ff4d4d;
+    --accent2:    #ffc94d;
+    --accent3:    #4ddfb8;
+    --accent4:    #7b6bff;
+    --texte-doux: #777;
+    --texte-mid:  #8b8a8a;
+
+    /* Fonts */
+    --font-titre: 'Playfair Display', serif;
+    --font-corps: 'DM Sans', sans-serif;
+    --font-ui:    sans-serif;
+
+    /* Tailles de police */
+    --taille-h1:        2rem;
+    --taille-h2:        1.6rem;
+    --taille-h3:        1.3rem;
+    --taille-corps:     1rem;
+    --taille-petit:     0.88rem;
+    --taille-tres-petit:0.8rem;
+    --taille-menu:      16px;
+
+    /* Hauteur menu */
+    --hauteur-menu: 60px;
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: var(--font-corps);
+    color: var(--noir);
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 { font-size: var(--taille-h1); }
+h2 { font-size: var(--taille-h2); }
+h3 { font-size: var(--taille-h3); }
+
+h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+}
+
+/* ===== MENU PRINCIPAL ===== */
+header nav > div {
+    background-color: var(--gris-fonce);
+    display: flex;
+    align-items: center;
+    height: var(--hauteur-menu);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.menu-global {
+    font-family: var(--font-ui);
+}
+
+.menu-global :hover {
+    color: var(--texte-mid);
+}
+
+    /* --- Logo à gauche --- */
+    .menu-logo {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-logo a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        white-space: nowrap;
+        font-size: var(--taille-menu);
+    }
+
+    /* --- Menu central --- */
+    .menu-central {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .menu-central a {
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        padding: 0 15px;
+        line-height: var(--hauteur-menu);
+        font-size: var(--taille-menu);
+    }
+
+    /* --- Menu à droite --- */
+    .menu-droite {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        white-space: nowrap;
+    }
+
+    .menu-droite a {
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        padding: 0 15px;
+        line-height: var(--hauteur-menu);
+        font-size: var(--taille-menu);
+    }
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--gris-fonce);
+    border-top: 1px solid var(--gris-bord);
+    padding: 28px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-ui);
+    font-size: var(--taille-tres-petit);
+    color: var(--texte-doux);
+    margin-top: auto;
+}
+
+.footer-logo {
+    font-family: var(--font-titre);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--blanc);
+}
+
+.footer-liens {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-liens a {
+    color: var(--texte-doux);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-liens a:hover {
+    color: var(--blanc);
+}
+
+.footer-copy {
+    color: var(--texte-doux);
+}
